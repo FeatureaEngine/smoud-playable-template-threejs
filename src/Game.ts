@@ -1,7 +1,6 @@
 import { sdk } from '@smoud/playable-sdk';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { AnimationMixer } from 'three';
 import buttonBg from 'assets/button.png';
 import storkModel from 'assets/Stork.glb';
 
@@ -13,7 +12,7 @@ export class Game {
   private installButton: HTMLDivElement;
   private buttonImage: HTMLImageElement;
   private storkModel: THREE.Group;
-  private mixer: AnimationMixer;
+  private mixer: THREE.AnimationMixer;
   private clock: THREE.Clock;
   public isPaused: boolean = false;
 
@@ -49,7 +48,7 @@ export class Game {
         this.storkModel = gltf.scene;
 
         // Set up animation mixer
-        this.mixer = new AnimationMixer(this.storkModel);
+        this.mixer = new THREE.AnimationMixer(this.storkModel);
 
         // Play first animations
         if (gltf.animations.length > 0) {
