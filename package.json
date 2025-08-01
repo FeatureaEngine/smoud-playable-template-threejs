@@ -19,11 +19,11 @@
   ],
   "author": "Smoud",
   "dependencies": {
-    "@smoud/playable-sdk": "^1.0.17",
+    "@smoud/playable-sdk": "^1.0.20",
     "three": "^0.174.0"
   },
   "devDependencies": {
-    "@smoud/playable-scripts": "^1.0.18",
+    "@smoud/playable-scripts": "^1.0.29",
     "@types/three": "^0.174.0",
     "prettier": "^2.7.1"
   },
